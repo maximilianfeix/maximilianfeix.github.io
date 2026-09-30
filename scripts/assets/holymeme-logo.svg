@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" width="640" height="720">
+  <defs>
+    <radialGradient id="amb" cx="50%" cy="36%" r="60%">
+      <stop offset="0%" stop-color="#FFE680" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#FFE680" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="body" cx="38%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#FFEFA6"/>
+      <stop offset="45%" stop-color="#FFD22E"/>
+      <stop offset="100%" stop-color="#F0A000"/>
+    </radialGradient>
+    <linearGradient id="halo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF3B0"/>
+      <stop offset="50%" stop-color="#FFD22E"/>
+      <stop offset="100%" stop-color="#E08A00"/>
+    </linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#E6ECF6"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE680"/>
+      <stop offset="100%" stop-color="#F2A800"/>
+    </linearGradient>
+    <filter id="ds" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#2e1f00" flood-opacity=".4"/>
+    </filter>
+    <filter id="haloGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feDropShadow dx="0" dy="0" stdDeviation="9" flood-color="#FFC400" flood-opacity=".8"/>
+    </filter>
+  </defs>
+
+  <!-- ambient glow -->
+  <ellipse cx="320" cy="250" rx="300" ry="270" fill="url(#amb)"/>
+
+  <!-- sparkles -->
+  <g fill="#FFE680">
+    <path d="M126 150 l8 20 20 8 -20 8 -8 20 -8 -20 -20 -8 20 -8z" opacity=".9"/>
+    <path d="M508 168 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6z" opacity=".8"/>
+    <circle cx="150" cy="300" r="5" opacity=".6"/>
+    <circle cx="500" cy="320" r="4" opacity=".6"/>
+  </g>
+
+  <!-- halo -->
+  <g filter="url(#haloGlow)">
+    <ellipse cx="320" cy="92" rx="98" ry="29" fill="none" stroke="url(#halo)" stroke-width="22"/>
+    <ellipse cx="320" cy="89" rx="98" ry="29" fill="none" stroke="#FFFBE6" stroke-width="6" opacity=".85"/>
+  </g>
+
+  <!-- wings -->
+  <g filter="url(#ds)">
+    <path d="M212 280 C150 232 78 230 40 268 c40 -2 60 16 64 42 c28 -18 52 -10 66 8 c2 -28 18 -46 42 -60z" fill="url(#wing)"/>
+    <path d="M428 280 C490 232 562 230 600 268 c-40 -2 -60 16 -64 42 c-28 -18 -52 -10 -66 8 c-2 -28 -18 -46 -42 -60z" fill="url(#wing)"/>
+    <g stroke="#cdd5e6" stroke-width="3" fill="none" opacity=".7" stroke-linecap="round">
+      <path d="M196 282 c-26 -12 -54 -10 -78 6 M192 302 c-22 -8 -46 -4 -64 8"/>
+      <path d="M444 282 c26 -12 54 -10 78 6 M448 302 c22 -8 46 -4 64 8"/>
+    </g>
+  </g>
+
+  <!-- feet -->
+  <g fill="#E59400">
+    <ellipse cx="276" cy="386" rx="26" ry="16"/>
+    <ellipse cx="364" cy="386" rx="26" ry="16"/>
+  </g>
+
+  <!-- body -->
+  <g filter="url(#ds)">
+    <circle cx="320" cy="262" r="132" fill="url(#body)"/>
+    <circle cx="320" cy="262" r="132" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="3"/>
+    <ellipse cx="276" cy="200" rx="86" ry="48" fill="url(#gloss)" opacity=".7"/>
+  </g>
+
+  <!-- little waving arm -->
+  <g fill="url(#body)" stroke="#E59400" stroke-width="3">
+    <ellipse cx="436" cy="232" rx="26" ry="17" transform="rotate(-28 436 232)"/>
+    <ellipse cx="206" cy="300" rx="24" ry="16" transform="rotate(20 206 300)"/>
+  </g>
+
+  <!-- face -->
+  <g>
+    <path d="M256 252 q24 -26 50 0" fill="none" stroke="#2a1c00" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="368" cy="248" r="15" fill="#2a1c00"/>
+    <circle cx="373" cy="242" r="5" fill="#fff"/>
+    <path d="M268 300 q52 60 104 0 q-52 34 -104 0z" fill="#E5392E"/>
+    <path d="M268 300 q52 60 104 0" fill="none" stroke="#2a1c00" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="260" cy="308" rx="16" ry="10" fill="#FF7A59" opacity=".5"/>
+    <ellipse cx="380" cy="308" rx="16" ry="10" fill="#FF7A59" opacity=".5"/>
+  </g>
+
+  <!-- wordmark "holy" (Vektorpfade, monoline) -->
+  <g fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" filter="url(#ds)">
+    <path d="M214 446 V556"/>
+    <path d="M214 500 q0 -22 24 -22 q26 0 26 26 V556"/>
+    <ellipse cx="312" cy="524" rx="26" ry="34"/>
+    <path d="M366 446 V556"/>
+    <path d="M398 490 L420 548"/>
+    <path d="M444 490 L412 576"/>
+  </g>
+
+  <!-- wordmark "meme" (Vektorpfade, monoline) -->
+  <g fill="none" stroke="url(#wm)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" filter="url(#ds)">
+    <!-- m -->
+    <path d="M150 600 V664"/>
+    <path d="M150 620 q0 -20 21 -20 q20 0 20 22 V664"/>
+    <path d="M191 620 q0 -20 21 -20 q20 0 20 22 V664"/>
+    <!-- e -->
+    <path d="M300 642 q-8 22 -33 22 q-31 0 -31 -32 q0 -32 31 -32 q30 0 30 30 L268 630"/>
+    <!-- m -->
+    <path d="M338 600 V664"/>
+    <path d="M338 620 q0 -20 21 -20 q20 0 20 22 V664"/>
+    <path d="M379 620 q0 -20 21 -20 q20 0 20 22 V664"/>
+    <!-- e -->
+    <path d="M488 642 q-8 22 -33 22 q-31 0 -31 -32 q0 -32 31 -32 q30 0 30 30 L456 630"/>
+  </g>
+</svg>
