@@ -15,7 +15,11 @@ export function Background() {
   useEffect(() => {
     if (reduced) return;
     const el = ref.current!;
-    let tx = 0.5, ty = 0.35, x = tx, y = ty, raf = 0;
+    let tx = 0.5,
+      ty = 0.35,
+      x = tx,
+      y = ty,
+      raf = 0;
     const onMove = (e: PointerEvent) => {
       tx = e.clientX / window.innerWidth;
       ty = e.clientY / window.innerHeight;

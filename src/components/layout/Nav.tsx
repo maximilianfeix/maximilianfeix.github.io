@@ -18,8 +18,7 @@ export function Nav() {
   // The menu remembers the page it was opened on, so navigating anywhere closes it without an effect.
   const [openOn, setOpenOn] = useState<string | null>(null);
   const open = openOn === pathname;
-  const setOpen = (next: boolean | ((o: boolean) => boolean)) =>
-    setOpenOn((typeof next === "function" ? next(open) : next) ? pathname : null);
+  const setOpen = (next: boolean | ((o: boolean) => boolean)) => setOpenOn((typeof next === "function" ? next(open) : next) ? pathname : null);
 
   // Compress once the page has moved past the first screen, hide while scrolling down.
   useEffect(() => {
@@ -50,11 +49,7 @@ export function Nav() {
   }, [open]);
 
   return (
-    <header
-      ref={ref}
-      style={{ viewTransitionName: "site-nav" }}
-      className="fixed inset-x-0 top-0 z-50"
-    >
+    <header ref={ref} style={{ viewTransitionName: "site-nav" }} className="fixed inset-x-0 top-0 z-50">
       <nav
         aria-label="Main"
         className={`flex items-center justify-between px-[var(--gutter)] transition-[height,background-color,border-color] duration-500 ease-[var(--ease-out-expo)] ${
@@ -70,7 +65,11 @@ export function Nav() {
           <ul className="flex items-center gap-8">
             {navItems.map((item, i) => (
               <li key={item.href}>
-                <Link href={item.href} className="mono group relative inline-flex gap-2 py-2 text-paper-dim transition-colors hover:text-paper" data-cursor="view">
+                <Link
+                  href={item.href}
+                  className="mono group relative inline-flex gap-2 py-2 text-paper-dim transition-colors hover:text-paper"
+                  data-cursor="view"
+                >
                   <span className="text-muted-2">0{i + 1}</span>
                   <span>{item.label}</span>
                   <span className="absolute inset-x-0 bottom-1 h-px origin-right scale-x-0 bg-paper transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:origin-left group-hover:scale-x-100" />

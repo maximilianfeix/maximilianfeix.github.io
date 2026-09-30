@@ -34,7 +34,7 @@
   --color-line-strong: var(--line-strong);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --text-display: clamp(4.5rem, 15vw, 15rem);
+  --text-display: clamp(3rem, 14.5vw, 15rem);
   --text-mega: clamp(6rem, 28vw, 30rem);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
@@ -189,4 +189,19 @@ html.lenis body {
     transform: none !important;
     filter: none !important;
   }
+}
+
+/* The boot sequence is skipped before first paint on repeat visits (inline script in layout.tsx) and under reduced motion. */
+html.intro-seen [data-intro] {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-intro] {
+    display: none;
+  }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(1.35); opacity: 0; }
 }

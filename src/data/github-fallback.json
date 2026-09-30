@@ -1,0 +1,346 @@
+{
+  "repos": [
+    {
+      "name": "proxy-scraper",
+      "description": "Free proxies that actually work: 700+ sources, every hit verified (honeypots, injected scripts, TLS), a live list every hour, a rotating proxy server and an MCP server for AI agents.",
+      "url": "https://github.com/maximilianfeix/proxy-scraper",
+      "homepage": "https://maximilianfeix.github.io/proxy-scraper/",
+      "language": "Python",
+      "stars": 36,
+      "pushedAt": "2026-09-30T17:33:20Z",
+      "topics": [
+        "ai-agents",
+        "cli",
+        "discord-bot",
+        "free-proxy",
+        "hacktoberfest",
+        "honeypot-detection",
+        "http-proxy",
+        "mcp",
+        "mcp-server",
+        "proxy",
+        "proxy-checker",
+        "proxy-list",
+        "proxy-scraper",
+        "proxy-server",
+        "python",
+        "rotating-proxy",
+        "scraper",
+        "socks4",
+        "socks5",
+        "web-scraping"
+      ]
+    },
+    {
+      "name": "spillage",
+      "description": "Find the API keys your coding agents spilled into their logs. Claude Code, Codex, Gemini CLI, Cline and more. Scan, scrub, block the next one.",
+      "url": "https://github.com/maximilianfeix/spillage",
+      "homepage": "https://maximilianfeix.github.io/spillage/",
+      "language": "Python",
+      "stars": 1,
+      "pushedAt": "2026-09-29T16:02:51Z",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "cli",
+        "codex",
+        "devsecops",
+        "gemini-cli",
+        "python",
+        "secret-scanner",
+        "secrets",
+        "security"
+      ]
+    },
+    {
+      "name": "repoatlas",
+      "description": "Understand any TypeScript repo in one interactive map. Every connection links to source evidence.",
+      "url": "https://github.com/maximilianfeix/repoatlas",
+      "homepage": "https://maximilianfeix.github.io/repoatlas/",
+      "language": "TypeScript",
+      "stars": 1,
+      "pushedAt": "2026-09-28T16:06:48Z",
+      "topics": [
+        "agent-skills",
+        "architecture",
+        "architecture-map",
+        "browser-based",
+        "cli",
+        "code-analysis",
+        "code-understanding",
+        "code-visualization",
+        "codebase-navigation",
+        "codebase-visualization",
+        "codex",
+        "dependency-graph",
+        "developer-tools",
+        "github-actions",
+        "repository-analysis",
+        "single-file",
+        "source-code-analysis",
+        "static-analysis",
+        "typescript",
+        "typescript-ast"
+      ]
+    },
+    {
+      "name": "AxonPHPCLI",
+      "description": "Tiny PHP command-line tool that generates CI/CD configuration (GitHub Actions) for PHP projects",
+      "url": "https://github.com/maximilianfeix/AxonPHPCLI",
+      "homepage": "",
+      "language": "PHP",
+      "stars": 1,
+      "pushedAt": "2026-06-05T15:32:27Z",
+      "topics": [
+        "ci-cd",
+        "cli",
+        "code-generator",
+        "composer",
+        "github-actions",
+        "php"
+      ]
+    },
+    {
+      "name": "maximilianfeix.github.io",
+      "description": "The Internet of Maxi - portfolio of Maximilian Feix. Next.js, Three.js, GSAP.",
+      "url": "https://github.com/maximilianfeix/maximilianfeix.github.io",
+      "homepage": "https://maximilianfeix.github.io",
+      "language": "TypeScript",
+      "stars": 0,
+      "pushedAt": "2026-09-30T18:09:04Z",
+      "topics": []
+    },
+    {
+      "name": "free-proxy-list",
+      "description": "🌐 Free proxy list updated every hour – HTTP, SOCKS4 & SOCKS5 proxies that actually work. Every proxy verified (handshake, honeypots, injected scripts, TLS). Per country, JSON & CSV.",
+      "url": "https://github.com/maximilianfeix/free-proxy-list",
+      "homepage": "https://maximilianfeix.github.io/proxy-scraper/",
+      "language": "",
+      "stars": 0,
+      "pushedAt": "2026-09-30T17:33:25Z",
+      "topics": [
+        "country-proxy",
+        "elite-proxy",
+        "free-proxies",
+        "free-proxy",
+        "free-proxy-list",
+        "github-actions",
+        "hacktoberfest",
+        "http-proxy",
+        "https-proxy",
+        "proxies",
+        "proxy",
+        "proxy-checker",
+        "proxy-list",
+        "proxy-scraper",
+        "rotating-proxy",
+        "socks4",
+        "socks5",
+        "socks5-proxy",
+        "updated-hourly",
+        "web-scraping"
+      ]
+    },
+    {
+      "name": "actions-guard",
+      "description": "GitHub App that reviews pull requests changing GitHub Actions workflows and flags the security risks they add: script injection, pwn requests, unpinned actions, broad permissions.",
+      "url": "https://github.com/maximilianfeix/actions-guard",
+      "homepage": "https://maximilianfeix.github.io/actions-guard/",
+      "language": "TypeScript",
+      "stars": 0,
+      "pushedAt": "2026-09-29T18:16:50Z",
+      "topics": [
+        "ci",
+        "devsecops",
+        "github-actions",
+        "github-app",
+        "pull-request",
+        "security",
+        "static-analysis",
+        "supply-chain-security",
+        "typescript",
+        "workflow"
+      ]
+    },
+    {
+      "name": "actions-guard-demo",
+      "description": "Demo pull requests for Actions Guard, the GitHub App that reviews workflow changes.",
+      "url": "https://github.com/maximilianfeix/actions-guard-demo",
+      "homepage": "",
+      "language": "",
+      "stars": 0,
+      "pushedAt": "2026-09-29T16:48:59Z",
+      "topics": []
+    },
+    {
+      "name": "homebrew-tap",
+      "description": "Homebrew formulae: spillage",
+      "url": "https://github.com/maximilianfeix/homebrew-tap",
+      "homepage": "",
+      "language": "Ruby",
+      "stars": 0,
+      "pushedAt": "2026-09-29T13:26:54Z",
+      "topics": []
+    },
+    {
+      "name": "gha-preview",
+      "description": "Preview and explore GitHub Actions workflows before you push. Local-first, interactive, and honest about runtime conditions.",
+      "url": "https://github.com/maximilianfeix/gha-preview",
+      "homepage": "https://maximilianfeix.github.io/gha-preview/",
+      "language": "TypeScript",
+      "stars": 0,
+      "pushedAt": "2026-09-28T23:07:13Z",
+      "topics": [
+        "ci-cd",
+        "developer-tools",
+        "github-actions",
+        "github-pages",
+        "open-source",
+        "typescript",
+        "workflow-visualizer",
+        "yaml"
+      ]
+    },
+    {
+      "name": "CurrentlyFreeDomains",
+      "description": "Currently Free .de Domains ",
+      "url": "https://github.com/maximilianfeix/CurrentlyFreeDomains",
+      "homepage": "",
+      "language": "",
+      "stars": 0,
+      "pushedAt": "2026-05-21T12:12:35Z",
+      "topics": [
+        "4letter",
+        "currentlyfree",
+        "domains",
+        "premium-domains",
+        "stars"
+      ]
+    },
+    {
+      "name": "Mini-Laravel",
+      "description": "Minimal Laravel-style PHP framework from scratch: router, dependency injection container, controllers and middleware",
+      "url": "https://github.com/maximilianfeix/Mini-Laravel",
+      "homepage": "",
+      "language": "PHP",
+      "stars": 0,
+      "pushedAt": "2026-04-27T18:43:23Z",
+      "topics": [
+        "dependency-injection",
+        "framework",
+        "learning",
+        "middleware",
+        "php",
+        "router"
+      ]
+    },
+    {
+      "name": "Berufsschule-Anwendungsentwicklung-C-",
+      "description": "C++ exercises from vocational school (application development apprenticeship)",
+      "url": "https://github.com/maximilianfeix/Berufsschule-Anwendungsentwicklung-C-",
+      "homepage": "",
+      "language": "C++",
+      "stars": 0,
+      "pushedAt": "2026-01-13T07:34:14Z",
+      "topics": [
+        "apprenticeship",
+        "cpp",
+        "exercises",
+        "learning"
+      ]
+    },
+    {
+      "name": "C--Template-fr-Mac",
+      "description": "C++ starter template for macOS with VS Code build, run and debug tasks",
+      "url": "https://github.com/maximilianfeix/C--Template-fr-Mac",
+      "homepage": "",
+      "language": "C++",
+      "stars": 0,
+      "pushedAt": "2025-10-07T07:22:03Z",
+      "topics": [
+        "clang",
+        "cpp",
+        "macos",
+        "template",
+        "vscode"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Python",
+      "share": 0.6270077178887455
+    },
+    {
+      "name": "TypeScript",
+      "share": 0.19493860644214964
+    },
+    {
+      "name": "HTML",
+      "share": 0.07926157241958158
+    },
+    {
+      "name": "JavaScript",
+      "share": 0.0760298546761044
+    },
+    {
+      "name": "CSS",
+      "share": 0.018508607909965866
+    },
+    {
+      "name": "PHP",
+      "share": 0.0017290976158326427
+    },
+    {
+      "name": "Dockerfile",
+      "share": 0.0009386962260981762
+    }
+  ],
+  "totalStars": 39,
+  "publicRepos": 14,
+  "activity": [
+    {
+      "kind": "pr",
+      "repo": "maximilianfeix.github.io",
+      "title": "Foundation: design tokens, layout and deploy to GitHub Pages",
+      "url": "https://github.com/maximilianfeix/maximilianfeix.github.io/pull/5",
+      "date": "2026-09-30T18:09:00Z"
+    },
+    {
+      "kind": "pr",
+      "repo": "semantica-agi/semantica",
+      "title": "fix(split): stop character/word/token splitters after the final chunk",
+      "url": "https://github.com/semantica-agi/semantica/pull/1825",
+      "date": "2026-09-30T06:57:38Z"
+    },
+    {
+      "kind": "pr",
+      "repo": "MakazhanAlpamys/Soup",
+      "title": "fix(train): forward --fsdp on prm / moe_lora_routing and --fsdp / --deepspeed on online_dpo (#1204)",
+      "url": "https://github.com/MakazhanAlpamys/Soup/pull/1417",
+      "date": "2026-09-30T06:56:14Z"
+    },
+    {
+      "kind": "pr",
+      "repo": "semantica-agi/semantica",
+      "title": "fix(embeddings): forward method/model_name from EmbeddingGenerator to TextEmbedder",
+      "url": "https://github.com/semantica-agi/semantica/pull/1824",
+      "date": "2026-09-30T06:30:37Z"
+    },
+    {
+      "kind": "pr",
+      "repo": "ldbumble/taskuary",
+      "title": "test: railAge and studioElapsed boundaries",
+      "url": "https://github.com/ldbumble/taskuary/pull/118",
+      "date": "2026-09-29T21:45:03Z"
+    },
+    {
+      "kind": "pr",
+      "repo": "ldbumble/taskuary",
+      "title": "test: add replyDelivery.test.mjs",
+      "url": "https://github.com/ldbumble/taskuary/pull/119",
+      "date": "2026-09-29T21:44:55Z"
+    }
+  ],
+  "fetchedAt": "2026-09-30T18:13:15.699Z"
+}

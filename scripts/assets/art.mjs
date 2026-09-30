@@ -9,13 +9,13 @@ const frame = (body, extra = "") => `<svg xmlns="http://www.w3.org/2000/svg" wid
 const label = (x, y, t, c = MUTED, s = 22) => `<text x="${x}" y="${y}" font-family="${mono}" font-size="${s}" fill="${c}" letter-spacing="2">${t}</text>`;
 
 // Axon CLI: a terminal generating a workflow
-const lines = [["$ axon init --php 8.3", FG], ["  detected composer.json · phpunit · php-cs-fixer", MUTED], ["  writing .github/workflows/ci.yml", MUTED], ["", FG],
- ["name: CI", ACC], ["on: [push, pull_request]", FG], ["jobs:", FG], ["  test:", FG], ["    runs-on: ubuntu-latest", FG], ["    steps:", FG], ["      - uses: actions/checkout@v4", FG], ["      - uses: shivammathur/setup-php@v2", FG], ["      - run: composer install --no-progress", FG], ["      - run: vendor/bin/phpunit", FG], ["", FG], ["  ✓ done in 0.04s", ACC]];
+const lines = [["$ vendor/bin/axonphp ci:init github", FG], ["  reading composer.json", MUTED], ["  writing .github/workflows/ci.yml", MUTED], ["", FG],
+ ["name: CI", ACC], ["on: [push, pull_request]", FG], ["jobs:", FG], ["  test:", FG], ["    runs-on: ubuntu-latest", FG], ["    steps:", FG], ["      - uses: actions/checkout@v4", FG], ["      - uses: shivammathur/setup-php@v2", FG], ["      - run: composer install --no-progress", FG], ["      - run: vendor/bin/phpunit", FG], ["", FG], ["  ✓ CI configuration generated", ACC]];
 const axon = frame(`<rect x="560" y="90" width="940" height="620" rx="6" fill="#0C0C0E" stroke="${LINE}"/>
-<line x1="560" y1="140" x2="1500" y2="140" stroke="${LINE}"/>${label(590, 122, "axon — zsh", MUTED, 18)}
+<line x1="560" y1="140" x2="1500" y2="140" stroke="${LINE}"/>${label(590, 122, "axonphp — zsh", MUTED, 18)}
 ${lines.map(([t, c], i) => `<text x="600" y="${190 + i * 32}" font-family="${mono}" font-size="22" fill="${c}" xml:space="preserve">${t.replace(/&/g, "&amp;")}</text>`).join("")}
-<text x="100" y="330" font-family="${sans}" font-weight="700" font-size="120" fill="${FG}" letter-spacing="-4">axon</text>
-${label(106, 390, "PHP → CI/CD IN ONE COMMAND")}${label(106, 690, "PHP · COMPOSER · GITHUB ACTIONS", MUTED, 18)}`);
+<text x="100" y="330" font-family="${sans}" font-weight="700" font-size="92" fill="${FG}" letter-spacing="-3">AxonPHP</text>
+${label(106, 390, "CI/CD CONFIG IN ONE COMMAND")}${label(106, 690, "PHP · COMPOSER · GITHUB ACTIONS", MUTED, 18)}`);
 
 // Event registration: seats/slots grid + ticket
 let seats = ""; for (let r = 0; r < 9; r++) for (let c = 0; c < 16; c++) { const taken = ((r * 7 + c * 13) % 5) < 3; const x = 760 + c * 44, y = 180 + r * 44; seats += `<rect x="${x}" y="${y}" width="30" height="30" rx="3" fill="${taken ? "#2A2A2E" : "none"}" stroke="${taken ? "none" : "#3A3A3F"}"/>`; }

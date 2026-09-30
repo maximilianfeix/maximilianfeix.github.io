@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -37,14 +37,15 @@ export function SmoothScroll() {
   }, [reduced]);
 
   // A new route starts at the top (or at its hash), and every trigger measures the new layout.
+  // After a client-side navigation, keyboard and screen-reader focus moves to the new content.
+  const firstRoute = useRef(true);
   useEffect(() => {
     const hash = window.location.hash;
-    if (hash) {
-      const el = document.querySelector(hash);
-      if (el) lenis?.scrollTo(el as HTMLElement, { immediate: true });
-    } else {
-      lenis?.scrollTo(0, { immediate: true });
-    }
+    const target = hash ? document.querySelector<HTMLElement>(hash) : null;
+    if (target) lenis?.scrollTo(target, { immediate: true });
+    else if (!hash) lenis?.scrollTo(0, { immediate: true });
+    if (!firstRoute.current) (target ?? document.getElementById("main"))?.focus({ preventScroll: true });
+    firstRoute.current = false;
     const id = requestAnimationFrame(() => ScrollTrigger.refresh());
     return () => cancelAnimationFrame(id);
   }, [pathname]);

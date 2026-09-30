@@ -5,6 +5,8 @@ import { site } from "@/lib/site";
 import { Nav } from "@/components/layout/Nav";
 import { Background } from "@/components/layout/Background";
 import { SmoothScroll } from "@/features/scroll/SmoothScroll";
+import { Cursor } from "@/features/cursor/Cursor";
+import { WebGLLayer } from "@/components/webgl/WebGLLayer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -35,16 +37,29 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} antialiased`} suppressHydrationWarning>
+      <head>
+        <script
+          // Runs before first paint, so repeat visitors never see the boot overlay flash.
+          dangerouslySetInnerHTML={{
+            __html: `try{if(sessionStorage.getItem("maxi:intro-seen")==="1")document.documentElement.classList.add("intro-seen")}catch(e){}`,
+          }}
+        />
+        <noscript>
+          <style>{`[data-char]{transform:none!important}[data-fade]{opacity:1!important}[data-intro]{display:none}`}</style>
+        </noscript>
+      </head>
       <body>
         <a href="#main" className="skip-link mono">
           Skip to content
         </a>
         <Background />
+        <WebGLLayer />
         <SmoothScroll />
         <Nav />
         {children}
         <div aria-hidden className="grain" />
+        <Cursor />
       </body>
     </html>
   );
