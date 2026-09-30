@@ -22,21 +22,31 @@ export function Reveal({
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const root = ref.current!;
+    const show = (els: Element[]) =>
+      gsap.to(els, { opacity: 1, y: 0, duration: duration.slow, ease: ease.out, stagger: stagger.items, overwrite: true });
+    // Tabbing into something not revealed yet reveals it at once.
+    const onFocus = (e: FocusEvent) => {
+      const item = (e.target as HTMLElement).closest("[data-reveal]");
+      if (item && item.getAttribute("data-reveal") !== "line") show([item]);
+    };
+
     const ctx = gsap.context(() => {
       const items = gsap.utils.toArray<HTMLElement>("[data-reveal]:not([data-reveal=line])");
       const lines = gsap.utils.toArray<HTMLElement>("[data-reveal=line]");
-      if (items.length) gsap.set(items, { autoAlpha: 0, y: 28 });
+      // Opacity only, never visibility: hidden elements can't take keyboard focus.
+      if (items.length) gsap.set(items, { opacity: 0, y: 28 });
       if (lines.length) gsap.set(lines, { scaleX: 0, transformOrigin: "left center" });
-      ScrollTrigger.batch(items, {
-        start: "top 88%",
-        once: true,
-        onEnter: (batch) => gsap.to(batch, { autoAlpha: 1, y: 0, duration: duration.slow, ease: ease.out, stagger: stagger.items }),
-      });
+      ScrollTrigger.batch(items, { start: "top 88%", once: true, onEnter: show });
       lines.forEach((line) =>
         gsap.to(line, { scaleX: 1, duration: duration.cinematic, ease: ease.inOut, scrollTrigger: { trigger: line, start: "top 90%", once: true } }),
       );
     }, ref);
-    return () => ctx.revert();
+    root.addEventListener("focusin", onFocus);
+    return () => {
+      root.removeEventListener("focusin", onFocus);
+      ctx.revert();
+    };
   }, []);
 
   return (

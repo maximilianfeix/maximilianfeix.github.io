@@ -1,8 +1,8 @@
-// The static export writes the RSC payloads of nested segments into folders
-// (out/projects/x/__next.projects/$d$slug/__PAGE__.txt), but the client requests them with dots
-// (out/projects/x/__next.projects.$d$slug.__PAGE__.txt). A server with rewrites would bridge that;
-// GitHub Pages has none, so every client-side navigation would fall back to a full page load and
-// lose its view transition. This copies each payload to the name the client asks for.
+// On Windows, the static export writes the RSC payloads of nested segments into folders
+// (out/projects/x/__next.projects/$d$slug/__PAGE__.txt), while the client requests them with dots
+// (out/projects/x/__next.projects.$d$slug.__PAGE__.txt). Without rewrites on GitHub Pages, every
+// client-side navigation would then fall back to a full page load and lose its view transition.
+// Linux builds (CI) already write the dotted names, so there this copies nothing.
 import { cpSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
