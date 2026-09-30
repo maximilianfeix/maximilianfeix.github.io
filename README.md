@@ -5,6 +5,12 @@ The portfolio of Maximilian Feix – **[maximilianfeix.github.io](https://maximi
 A small digital universe instead of a template: a cinematic intro, a hero that folds into depth as you scroll, a draggable
 map of projects wired together like a network, and project pages you *enter* rather than open.
 
+| | |
+|---|---|
+| ![Hero](docs/hero.webp) | ![Project graph](docs/graph.webp) |
+| ![Opening a project](docs/transition.webp) | ![Project page](docs/project.webp) |
+| ![Scroll sequence](docs/sequence.webp) | ![About](docs/about.webp) |
+
 ## Stack
 
 Next.js (static export) · TypeScript · Tailwind CSS · GSAP + ScrollTrigger · Lenis · Three.js / React Three Fiber · Zustand

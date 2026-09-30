@@ -29,6 +29,6 @@ export const useUI = create<UIState>((set) => ({
   toggleSound: () => set((s) => ({ sound: !s.sound })),
   navHidden: false,
   setNavHidden: (navHidden) => set({ navHidden }),
-  quality: "high",
+  quality: "off", // until detectQuality() has run
   setQuality: (quality) => set({ quality }),
 }));
